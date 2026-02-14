@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "AppStorys_iOSWrapper",
             dependencies: [
-                "AppStorys_iOSBinary",
+                "AppStorys_iOS",
                 .product(name: "Kingfisher", package: "Kingfisher"),
                 .product(name: "ConfettiSwiftUI", package: "ConfettiSwiftUI"),
                 .product(name: "Lottie", package: "lottie-ios"),
@@ -33,7 +33,7 @@ let package = Package(
         ),
         // The pre-compiled binary
         .binaryTarget(
-            name: "AppStorys_iOSBinary",
+            name: "AppStorys_iOS",
             url: "https://github.com/appversal/Appstorys_iOS/releases/download/1.0.1/AppStorys_iOS.xcframework.zip",
             checksum: "7b606632b6bb860b65309b52b158a69dc2f8652a070cbe8349dd4a519b86c3de"
         ),
