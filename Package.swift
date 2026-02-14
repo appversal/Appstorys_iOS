@@ -10,14 +10,29 @@ let package = Package(
     products: [
         .library(
             name: "AppStorys_iOS",
-            targets: ["AppStorys_iOS"]
+            targets: ["AppStorysWrapper"]
         ),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/onevcat/Kingfisher.git", from: "7.12.0"),
+        .package(url: "https://github.com/simibac/ConfettiSwiftUI.git", from: "1.1.0"),
+        .package(url: "https://github.com/airbnb/lottie-ios.git", from: "4.4.0"),
     ],
     targets: [
         .binaryTarget(
             name: "AppStorys_iOS",
-            url: "https://github.com/appversal/Appstorys_iOS/releases/download/1.0.2/AppStorys_iOS.xcframework.zip",
-            checksum: "7b606632b6bb860b65309b52b158a69dc2f8652a070cbe8349dd4a519b86c3de"
+            url: "https://github.com/appversal/Appstorys_iOS/releases/download/1.1.0/AppStorys_iOS.xcframework.zip",
+            checksum: "c5ef7b49430f9f1a9983ea8bdf6c4af4a0bac28083cbce905ced078f4f4876cc"
+        ),
+        .target(
+            name: "AppStorysWrapper",
+            dependencies: [
+                "AppStorys_iOS",
+                .product(name: "Kingfisher", package: "Kingfisher"),
+                .product(name: "ConfettiSwiftUI", package: "ConfettiSwiftUI"),
+                .product(name: "Lottie", package: "lottie-ios"),
+            ],
+            path: "Sources/AppStorysWrapper"
         ),
     ]
 )
