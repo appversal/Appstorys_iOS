@@ -21,8 +21,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AppStorys_iOS",
-            url: "https://github.com/appversal/Appstorys_iOS/releases/download/1.1.0/AppStorys_iOS.xcframework.zip",
-            checksum: "c5ef7b49430f9f1a9983ea8bdf6c4af4a0bac28083cbce905ced078f4f4876cc"
+            url: "https://github.com/appversal/Appstorys_iOS/releases/download/1.1.1/AppStorys_iOS.xcframework.zip",
+            checksum: "e0625539a96142d31f425e9344897a37064d24f30b4200056e146694dd32a5eb"
         ),
         .target(
             name: "AppStorysWrapper",
