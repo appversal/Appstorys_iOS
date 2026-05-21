@@ -17,7 +17,7 @@ let package = Package(
         .binaryTarget(
             name: "AppStorys_iOS",
             url: "https://github.com/appversal/Appstorys_iOS/releases/download/1.5.2/AppStorys_iOS.xcframework.zip",
-            checksum: "11c341023af0ee354acb6f10df0bd13cd29887c33f5aa03052373db41383a8ed"
+            checksum: "5c55aa0180151155480f7342218db64565e742f44f2f1338fb888ec9a12de758"
         ),
     ]
 )
